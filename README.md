@@ -1,6 +1,8 @@
 # simulink-aircraft-library
 Simulink&reg; library of aircraft models
 
+[![View simulink-aircraft-library on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/3019-simulink-aircraft-library)
+
 Airlib is a library of aircraft models to be used with Simulink 3.1 (MATLAB 5.3) or later (tested until 2018a).
 
 It is based on two basic blocks that implement a continuous-time and a discrete-time nonlinear general aircraft model.
