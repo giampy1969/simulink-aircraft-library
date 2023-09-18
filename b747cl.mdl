@@ -1,0 +1,2513 @@
+Model {
+  Name			  "b747cl"
+  Version		  3.00
+  SimParamPage		  "WorkspaceI/O"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "Inf"
+  SolverMode		  "Auto"
+  Solver		  "FixedStepDiscrete"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  off
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  off
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  off
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  Created		  "Thu Oct 10 13:35:41 2002"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "gcampa"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Jan 24 17:51:43 2018"
+  ModelVersionFormat	  "1.%<AutoIncrement:189>"
+  ConfigurationManager	  "None"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "b747cl"
+    Location		    [591, 172, 1274, 521]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "Aircraft States"
+      Position		      [510, 124, 530, 136]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      VariableName	      "x"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "0.05"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Airspeed"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 22, 655, 28]
+      Floating		      off
+      Location		      [960, 60, 1268, 246]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100"
+      YMin		      "142.641"
+      YMax		      "157.655"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData5"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Alpha"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 47, 655, 53]
+      Floating		      off
+      Location		      [959, 302, 1265, 484]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100"
+      YMin		      "0.044176"
+      YMax		      "0.0488262"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData4"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Altitude"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 297, 655, 303]
+      Floating		      off
+      Location		      [964, 778, 1270, 972]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100"
+      YMin		      "57.9499"
+      YMax		      "64.0499"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData15"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Autopilot"
+      Ports		      [5, 4, 0, 0, 0]
+      Position		      [150, 133, 215, 197]
+      ForegroundColor	      "red"
+      ShowPortLabels	      on
+      Port {
+	PortNumber		2
+	Name			"d_s"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"d_a"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		4
+	Name			"d_r"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"Autopilot"
+	Location		[61, 161, 868, 677]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "throttle"
+	  Position		  [25, 58, 55, 72]
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "long stick"
+	  Position		  [25, 98, 55, 112]
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "lat stick"
+	  Position		  [25, 138, 55, 152]
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "pedal"
+	  Position		  [25, 178, 55, 192]
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "sensors"
+	  Position		  [405, 468, 435, 482]
+	  Orientation		  "left"
+	  ForegroundColor	  "orange"
+	  Port			  "5"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux1"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [380, 363, 385, 452]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "da"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "dr"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux2"
+	  Ports			  [1, 2, 0, 0, 0]
+	  Position		  [380, 274, 385, 361]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Outputs		  "2"
+	  Port {
+	    PortNumber		    1
+	    Name		    "thr"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	  Port {
+	    PortNumber		    2
+	    Name		    "de"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Demux
+	  Name			  "Demux3"
+	  Ports			  [1, 4, 0, 0, 0]
+	  Position		  [660, 164, 665, 316]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Outputs		  "4"
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  "Ground1"
+	  Position		  [30, 310, 50, 330]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  "Ground2"
+	  Position		  [30, 400, 50, 420]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Klg "
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [270, 303, 310, 337]
+	  ShowPortLabels	  on
+	  MaskType		  "State Space"
+	  MaskPromptString	  "Matrix"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskVariables		  "M=@1;"
+	  MaskDisplay		  "disp('Matrix\\nGain')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "[0.1942   -0.8227    0.0057    0.6253    0."
+"0090;  0.0283    7.9374   -5.0871  -16.2986   -0.0437]"
+	  System {
+	    Name		    "Klg "
+	    Location		    [437, 220, 685, 333]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [25, 38, 55, 52]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      StateSpace
+	      Name		      "Matrix Gain"
+	      Position		      [80, 28, 140, 62]
+	      A			      "[]"
+	      B			      "[]"
+	      C			      "[]"
+	      D			      "M"
+	      X0		      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [165, 38, 195, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Matrix Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Matrix Gain"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "Klt "
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [270, 393, 310, 427]
+	  ShowPortLabels	  on
+	  MaskType		  "State Space"
+	  MaskPromptString	  "Matrix"
+	  MaskStyleString	  "edit"
+	  MaskTunableValueString  "on"
+	  MaskEnableString	  "on"
+	  MaskVisibilityString	  "on"
+	  MaskVariables		  "M=@1;"
+	  MaskDisplay		  "disp('Matrix\\nGain')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "[0.2844   -0.1878   -0.2314   -0.1641; 1.18"
+"21   -0.4567   -1.8328   -0.4900]"
+	  System {
+	    Name		    "Klt "
+	    Location		    [437, 220, 685, 333]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      Position		      [25, 38, 55, 52]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      StateSpace
+	      Name		      "Matrix Gain"
+	      Position		      [80, 28, 140, 62]
+	      A			      "[]"
+	      B			      "[]"
+	      C			      "[]"
+	      D			      "M"
+	      X0		      "0"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out1"
+	      Position		      [165, 38, 195, 52]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      DstBlock		      "Matrix Gain"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "Matrix Gain"
+	      SrcPort		      1
+	      DstBlock		      "Out1"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [380, 42, 385, 208]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Inputs		  "4"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Pilot"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux2"
+	  Ports			  [4, 1, 0, 0, 0]
+	  Position		  [445, 275, 450, 450]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Inputs		  "4"
+	  DisplayOption		  "none"
+	  Port {
+	    PortNumber		    1
+	    Name		    "Controller"
+	    TestPoint		    off
+	    RTWStorageClass	    "Auto"
+	  }
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector1"
+	  Position		  [165, 433, 210, 457]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Elements		  "[3 4 6 9]"
+	  InputPortWidth	  "40"
+	}
+	Block {
+	  BlockType		  Selector
+	  Name			  "Selector3"
+	  Position		  [165, 343, 210, 367]
+	  Orientation		  "left"
+	  ShowName		  off
+	  Elements		  "[1 2 5 8 12]"
+	  InputPortWidth	  "40"
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum1"
+	  Ports			  [3, 1, 0, 0, 0]
+	  Position		  [130, 400, 150, 420]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  IconShape		  "round"
+	  Inputs		  "++-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum2"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [335, 310, 355, 330]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum3"
+	  Ports			  [3, 1, 0, 0, 0]
+	  Position		  [130, 310, 150, 330]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  IconShape		  "round"
+	  Inputs		  "++-"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum4"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [335, 400, 355, 420]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum5"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [335, 55, 355, 75]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Reference
+	  Name			  "Switch"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [555, 209, 605, 271]
+	  NamePlacement		  "alternate"
+	  SourceBlock		  "simulink3/Nonlinear/Manual Switch"
+	  SourceType		  "Manual Switch"
+	  sw			  "0"
+	  action		  "0"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "c1"
+	  Position		  [280, 364, 310, 386]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Value			  "[0 0]"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "c4"
+	  Position		  [280, 274, 310, 296]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Value			  "[0.490154 -1.71374e-004]"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "c5"
+	  Position		  [285, 14, 315, 36]
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Value			  "2/3*0.490154"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "wind2"
+	  Position		  [285, 92, 315, 118]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Gain			  "-1/3"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "wind4"
+	  Position		  [285, 132, 315, 158]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Gain			  "-1/3"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "wind5"
+	  Position		  [285, 172, 315, 198]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Gain			  "-1/3"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "wind6"
+	  Position		  [285, 52, 315, 78]
+	  NamePlacement		  "alternate"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Gain			  "-2/3*188211.4522/368160"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "y0([1 2 5 8 12])"
+	  Position		  [30, 280, 120, 300]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  Value			  "[150.148  0.0464959 0 0.0464959 61]"
+	}
+	Block {
+	  BlockType		  Constant
+	  Name			  "y0([3 4 6 9])"
+	  Position		  [30, 369, 125, 391]
+	  NamePlacement		  "alternate"
+	  FontName		  "Arial"
+	  Value			  "[0.0 0.0 0.0 0.0]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "thr"
+	  Position		  [705, 173, 735, 187]
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "de"
+	  Position		  [705, 213, 735, 227]
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "da"
+	  Position		  [705, 253, 735, 267]
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "dr"
+	  Position		  [705, 293, 735, 307]
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "Selector1"
+	  SrcPort		  1
+	  Points		  [-20, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "Selector3"
+	  SrcPort		  1
+	  Points		  [-20, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "y0([3 4 6 9])"
+	  SrcPort		  1
+	  Points		  [10, 0]
+	  DstBlock		  "Sum1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "y0([1 2 5 8 12])"
+	  SrcPort		  1
+	  Points		  [15, 0]
+	  DstBlock		  "Sum3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "sensors"
+	  SrcPort		  1
+	  Points		  [-160, 0; 0, -30]
+	  Branch {
+	    DstBlock		    "Selector1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    Points		    [0, -90]
+	    DstBlock		    "Selector3"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  SrcBlock		  "Sum1"
+	  SrcPort		  1
+	  DstBlock		  "Klt "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sum3"
+	  SrcPort		  1
+	  DstBlock		  "Klg "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ground1"
+	  SrcPort		  1
+	  DstBlock		  "Sum3"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Ground2"
+	  SrcPort		  1
+	  DstBlock		  "Sum1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum2"
+	  SrcPort		  1
+	  DstBlock		  "Demux2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c4"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "long stick"
+	  SrcPort		  1
+	  DstBlock		  "wind2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "lat stick"
+	  SrcPort		  1
+	  DstBlock		  "wind4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "pedal"
+	  SrcPort		  1
+	  DstBlock		  "wind5"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Pilot"
+	  Labels		  [2, 0]
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  Points		  [115, 0; 0, 100]
+	  DstBlock		  "Switch"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "da"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  3
+	}
+	Line {
+	  Name			  "dr"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux1"
+	  SrcPort		  2
+	  DstBlock		  "Mux2"
+	  DstPort		  4
+	}
+	Line {
+	  Name			  "thr"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux2"
+	  SrcPort		  1
+	  DstBlock		  "Mux2"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "de"
+	  Labels		  [0, 0]
+	  SrcBlock		  "Demux2"
+	  SrcPort		  2
+	  DstBlock		  "Mux2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Switch"
+	  SrcPort		  1
+	  DstBlock		  "Demux3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux3"
+	  SrcPort		  1
+	  DstBlock		  "thr"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux3"
+	  SrcPort		  2
+	  DstBlock		  "de"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux3"
+	  SrcPort		  3
+	  DstBlock		  "da"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Demux3"
+	  SrcPort		  4
+	  DstBlock		  "dr"
+	  DstPort		  1
+	}
+	Line {
+	  Name			  "Controller"
+	  Labels		  [2, 1]
+	  SrcBlock		  "Mux2"
+	  SrcPort		  1
+	  Points		  [50, 0; 0, -110]
+	  DstBlock		  "Switch"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Klg "
+	  SrcPort		  1
+	  DstBlock		  "Sum2"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Klt "
+	  SrcPort		  1
+	  DstBlock		  "Sum4"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "Sum4"
+	  SrcPort		  1
+	  DstBlock		  "Demux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c1"
+	  SrcPort		  1
+	  Points		  [30, 0]
+	  DstBlock		  "Sum4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "wind2"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "wind4"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  3
+	}
+	Line {
+	  SrcBlock		  "wind5"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  4
+	}
+	Line {
+	  SrcBlock		  "Sum5"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "throttle"
+	  SrcPort		  1
+	  DstBlock		  "wind6"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "c5"
+	  SrcPort		  1
+	  Points		  [25, 0]
+	  DstBlock		  "Sum5"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "wind6"
+	  SrcPort		  1
+	  DstBlock		  "Sum5"
+	  DstPort		  2
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Beta"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 72, 655, 78]
+      Floating		      off
+      Location		      [912, 348, 1196, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "0"
+      YMax		      "250000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData6"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Clock
+      Name		      "Clock"
+      Position		      [150, 65, 170, 85]
+      ShowName		      off
+      DisplayTime	      off
+      Decimation	      "10"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "DT-B747"
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [360, 86, 415, 204]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/DT-B747"
+      SourceType	      "Discrete Time General Nonlinear Aircraft Model"
+      GM1		      "[8.32   59.74   510.95   24675560  44876980   6"
+"7383260   0   1315126  0   288772  0.05]"
+      CD_wind		      "[0.0164  0.2  0  0  0]"
+      CL_wind		      "[0.21  4.4  6.6  0.32  0.7]"
+      Cm_body		      "[0  -1   -20.5    -1.3    -2.7]"
+      CY_body		      "[0   -0.9    0     0     -0    0.12]"
+      Cl_body		      "[0    -0.16    -0.34   0.13    -0.013    0.008]"
+      Cn_body		      "[0    0.16   -0.026    -0.28     -0.0018   -0.1"
+"]"
+      x0		      "[150.148  0.0464959 0   0 0 0   0 0.0464959 0  "
+" 0 0 61]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdt"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Demux
+      Name		      "Demux1"
+      Ports		      [1, 12, 0, 0, 0]
+      Position		      [590, 15, 595, 310]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontName		      "Arial"
+      Outputs		      "12"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Double click here for info\n2"
+      Ports		      [0, 0, 0, 0, 0]
+      Position		      [510, 189, 571, 217]
+      ForegroundColor	      "green"
+      DropShadow	      on
+      ShowName		      off
+      ShowPortLabels	      off
+      MaskDisplay	      "disp('Output\\nSignals')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      System {
+	Name			"Double click here for info\n2"
+	Location		[597, 132, 750, 700]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Annotation {
+	  Position		  [22, 284]
+	  HorizontalAlignment	  "left"
+	  Text			  "01 v (m/s)\n02 alpha (rad)\n03 beta (rad) "
+"\n04 p (rad/s)\n05 q (rad/s)\n06 r  (rad/s)\n07 psi (rad)\n08 theta (rad) \n0"
+"9 phi (rad)\n10 xe (m)\n11 ye (m)\n12 ze (m)\n13 v dot (m/s2) \n14 alpha dot "
+"(rad/s) \n15 beta dot (rad/s) \n16 p dot (rad/s2)\n17 q dot (rad/s2)\n18 r do"
+"t (rad/s2)\n19 fi dot (rad/s)\n20 theta dot (rad/s)\n21 psi dot (rad/s)\n22 x"
+"e dot (m/s)\n23 ye dot (m/s)\n24 ze dot (m/s)\n25 u dot (m/s2)\n26 v dot (m/s"
+"2)\n27 w dot (m/s2)\n28 pb/2v (rad)\n29 qc/v (rad) \n30 rb/v (rad) \n31 Ax (g"
+") \n32 Ay (g) \n33 Az (g) \n34 ax (g)\n35 ay (g)\n36 az (g) \n37 delta elevat"
+"ors (rad) \n38 delta ailerons (rad)\n39 delta rudder (rad)\n40 delta stabs (r"
+"ad)"
+	}
+      }
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground1"
+      Position		      [255, 65, 275, 85]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Ground
+      Name		      "Ground2"
+      Position		      [45, 168, 65, 182]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux"
+      Ports		      [4, 1, 0, 0, 0]
+      Position		      [320, 153, 325, 212]
+      ForegroundColor	      "blue"
+      BackgroundColor	      "blue"
+      ShowName		      off
+      FontName		      "Arial"
+      Inputs		      "4"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Mux
+      Name		      "Mux1"
+      Ports		      [4, 1, 0, 0, 0]
+      Position		      [450, 88, 455, 242]
+      BackgroundColor	      "black"
+      ShowName		      off
+      FontName		      "Arial"
+      Inputs		      "[12 12 12 4]"
+      DisplayOption	      "none"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Noise"
+      Ports		      [0, 1, 0, 0, 0]
+      Position		      [380, 258, 415, 272]
+      SourceBlock	      "simulink3/Sources/Band-Limited\nWhite Noise"
+      SourceType	      "Continuous White Noise."
+      Cov		      "[1e-7*ones(1,6) 1e-10*ones(1,3) zeros(1,31)]"
+      Ts		      "0.05"
+      seed		      "1:40"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Phi"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 222, 655, 228]
+      Floating		      off
+      Location		      [548, 406, 832, 592]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "-0.0002446"
+      YMax		      "-0.0002438"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData12"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Selector
+      Name		      "Selector3"
+      Position		      [510, 153, 555, 177]
+      ShowName		      off
+      Elements		      "1:12"
+      InputPortWidth	      "40"
+    }
+    Block {
+      BlockType		      Sum
+      Name		      "Sum"
+      Ports		      [2, 1, 0, 0, 0]
+      Position		      [475, 255, 495, 275]
+      Orientation	      "down"
+      NamePlacement	      "alternate"
+      ShowName		      off
+      IconShape		      "round"
+      Inputs		      "++|"
+      SaturateOnIntegerOverflow	on
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator"
+      Position		      [295, 65, 315, 85]
+      ShowName		      off
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "The 747 Pilot Was Here"
+      Position		      [45, 138, 105, 152]
+      NamePlacement	      "alternate"
+      Value		      "0.75"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Theta"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 197, 655, 203]
+      Floating		      off
+      Location		      [962, 543, 1266, 737]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "300"
+      YMin		      "0.0463"
+      YMax		      "0.0467"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData11"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace4"
+      Position		      [190, 65, 210, 85]
+      ShowName		      off
+      VariableName	      "t"
+      Buffer		      "1000"
+      Decimation	      "1"
+      SampleTime	      "0.05"
+      SaveFormat	      "Matrix"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Wind"
+      Position		      [360, 56, 415, 74]
+      Orientation	      "left"
+      NamePlacement	      "alternate"
+      Value		      "zeros(6,1)"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "elevator"
+      Ports		      [4, 4, 0, 0, 0]
+      Position		      [250, 139, 300, 196]
+      ForegroundColor	      "blue"
+      ShowName		      off
+      FontName		      "Arial"
+      ShowPortLabels	      off
+      MaskDisplay	      "disp('Cable &\\nactuator\\ndynamics')"
+      MaskIconFrame	      on
+      MaskIconOpaque	      on
+      MaskIconRotate	      "none"
+      MaskIconUnits	      "autoscale"
+      Port {
+	PortNumber		3
+	Name			" "
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      System {
+	Name			"elevator"
+	Location		[85, 501, 654, 913]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"usletter"
+	PaperUnits		"inches"
+	ZoomFactor		"100"
+	AutoZoom		on
+	Block {
+	  BlockType		  Inport
+	  Name			  "D_thr"
+	  Position		  [45, 155, 65, 175]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "1"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "D_elv"
+	  Position		  [45, 245, 65, 265]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "2"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "D_ail"
+	  Position		  [45, 295, 65, 315]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "3"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  Inport
+	  Name			  "D_rud"
+	  Position		  [45, 345, 65, 365]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "4"
+	  PortWidth		  "-1"
+	  SampleTime		  "-1"
+	  DataType		  "auto"
+	  SignalType		  "auto"
+	  Interpolate		  on
+	}
+	Block {
+	  BlockType		  TransportDelay
+	  Name			  " delay"
+	  Position		  [100, 240, 145, 270]
+	  FontName		  "Arial"
+	  DelayTime		  "0.03"
+	  InitialInput		  "-1.71374e-004"
+	  BufferSize		  "1024"
+	}
+	Block {
+	  BlockType		  TransportDelay
+	  Name			  " delay "
+	  Position		  [100, 150, 145, 180]
+	  FontName		  "Arial"
+	  DelayTime		  "0.03"
+	  InitialInput		  "0.490154"
+	  BufferSize		  "1024"
+	}
+	Block {
+	  BlockType		  Gain
+	  Name			  "Force [N]"
+	  Position		  [285, 149, 315, 181]
+	  FontName		  "Arial"
+	  Gain			  "368160"
+	  SaturateOnIntegerOverflow on
+	}
+	Block {
+	  BlockType		  Ground
+	  Name			  "Ground1"
+	  Position		  [405, 175, 425, 195]
+	  ShowName		  off
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IIR1"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [185, 147, 245, 183]
+	  ShowPortLabels	  on
+	  MaskType		  "Discrete Time First Order IIR"
+	  MaskDescription	  "  Each channel has the transfer function \n"
+"  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approximati"
+"on of a/(s+a) if 10*a*T<pi"
+	  MaskHelp		  "<p>\n  Each channel has the transfer functi"
+"on \n  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approx"
+"imation of a/(s+a) if 10*a*T<pi\n</p>\n"
+	  MaskPromptString	  "Number of Channels|Cutoff Frequency (a)|Ini"
+"tial Condition|Sample Time"
+	  MaskStyleString	  "edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskVariables		  "ni=@1;a=@2;x0=@3;T=@4;"
+	  MaskInitialization	  "A=[];B=[];C=[];D=[];\nfor i=1:ni,\nA=[A,zer"
+"os(size(A,1),1);zeros(1,size(A,2)),exp(-a*T)];\nB=[B,zeros(size(B,1),1);zeros"
+"(1,size(B,2)),1-exp(-a*T)];\nC=[C,zeros(size(C,1),1);zeros(1,size(C,2)),exp(-"
+"a*T)];\nD=[D,zeros(size(D,1),1);zeros(1,size(D,2)),1-exp(-a*T)];\nend"
+	  MaskDisplay		  "dpoly(a,[1 a],'s')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|4|0.490154|0.05"
+	  System {
+	    Name		    "IIR1"
+	    Location		    [350, 143, 766, 250]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In"
+	      Position		      [80, 43, 110, 57]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      DiscreteStateSpace
+	      Name		      "Discrete State-Space"
+	      Position		      [135, 32, 255, 68]
+	      A			      "A"
+	      B			      "B"
+	      C			      "C"
+	      D			      "D"
+	      X0		      "x0"
+	      SampleTime	      "T"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      Position		      [275, 43, 305, 57]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Discrete State-Space"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In"
+	      SrcPort		      1
+	      DstBlock		      "Discrete State-Space"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IIR2"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [185, 237, 245, 273]
+	  ShowPortLabels	  on
+	  MaskType		  "Discrete Time First Order IIR"
+	  MaskDescription	  "  Each channel has the transfer function \n"
+"  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approximati"
+"on of a/(s+a) if 10*a*T<pi"
+	  MaskHelp		  "<p>\n  Each channel has the transfer functi"
+"on \n  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approx"
+"imation of a/(s+a) if 10*a*T<pi\n</p>\n"
+	  MaskPromptString	  "Number of Channels|Cutoff Frequency (a)|Ini"
+"tial Condition|Sample Time"
+	  MaskStyleString	  "edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskVariables		  "ni=@1;a=@2;x0=@3;T=@4;"
+	  MaskInitialization	  "A=[];B=[];C=[];D=[];\nfor i=1:ni,\nA=[A,zer"
+"os(size(A,1),1);zeros(1,size(A,2)),exp(-a*T)];\nB=[B,zeros(size(B,1),1);zeros"
+"(1,size(B,2)),1-exp(-a*T)];\nC=[C,zeros(size(C,1),1);zeros(1,size(C,2)),exp(-"
+"a*T)];\nD=[D,zeros(size(D,1),1);zeros(1,size(D,2)),1-exp(-a*T)];\nend"
+	  MaskDisplay		  "dpoly(a,[1 a],'s')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|15|-1.71374e-004|0.05"
+	  System {
+	    Name		    "IIR2"
+	    Location		    [350, 143, 766, 250]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In"
+	      Position		      [80, 43, 110, 57]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      DiscreteStateSpace
+	      Name		      "Discrete State-Space"
+	      Position		      [135, 32, 255, 68]
+	      A			      "A"
+	      B			      "B"
+	      C			      "C"
+	      D			      "D"
+	      X0		      "x0"
+	      SampleTime	      "T"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      Position		      [275, 43, 305, 57]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Discrete State-Space"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In"
+	      SrcPort		      1
+	      DstBlock		      "Discrete State-Space"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IIR3"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [185, 287, 245, 323]
+	  ShowPortLabels	  on
+	  MaskType		  "Discrete Time First Order IIR"
+	  MaskDescription	  "  Each channel has the transfer function \n"
+"  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approximati"
+"on of a/(s+a) if 10*a*T<pi"
+	  MaskHelp		  "<p>\n  Each channel has the transfer functi"
+"on \n  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approx"
+"imation of a/(s+a) if 10*a*T<pi\n</p>\n"
+	  MaskPromptString	  "Number of Channels|Cutoff Frequency (a)|Ini"
+"tial Condition|Sample Time"
+	  MaskStyleString	  "edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskVariables		  "ni=@1;a=@2;x0=@3;T=@4;"
+	  MaskInitialization	  "A=[];B=[];C=[];D=[];\nfor i=1:ni,\nA=[A,zer"
+"os(size(A,1),1);zeros(1,size(A,2)),exp(-a*T)];\nB=[B,zeros(size(B,1),1);zeros"
+"(1,size(B,2)),1-exp(-a*T)];\nC=[C,zeros(size(C,1),1);zeros(1,size(C,2)),exp(-"
+"a*T)];\nD=[D,zeros(size(D,1),1);zeros(1,size(D,2)),1-exp(-a*T)];\nend"
+	  MaskDisplay		  "dpoly(a,[1 a],'s')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|40|0|0.05"
+	  System {
+	    Name		    "IIR3"
+	    Location		    [350, 143, 766, 250]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In"
+	      Position		      [80, 43, 110, 57]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      DiscreteStateSpace
+	      Name		      "Discrete State-Space"
+	      Position		      [135, 32, 255, 68]
+	      A			      "A"
+	      B			      "B"
+	      C			      "C"
+	      D			      "D"
+	      X0		      "x0"
+	      SampleTime	      "T"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      Position		      [275, 43, 305, 57]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Discrete State-Space"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In"
+	      SrcPort		      1
+	      DstBlock		      "Discrete State-Space"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "IIR4"
+	  Ports			  [1, 1, 0, 0, 0]
+	  Position		  [185, 337, 245, 373]
+	  ShowPortLabels	  on
+	  MaskType		  "Discrete Time First Order IIR"
+	  MaskDescription	  "  Each channel has the transfer function \n"
+"  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approximati"
+"on of a/(s+a) if 10*a*T<pi"
+	  MaskHelp		  "<p>\n  Each channel has the transfer functi"
+"on \n  (1-exp(-aT))/(1-exp(-aT)(z^-1)) which is a good\n  (pz-matched) approx"
+"imation of a/(s+a) if 10*a*T<pi\n</p>\n"
+	  MaskPromptString	  "Number of Channels|Cutoff Frequency (a)|Ini"
+"tial Condition|Sample Time"
+	  MaskStyleString	  "edit,edit,edit,edit"
+	  MaskTunableValueString  "on,on,on,on"
+	  MaskCallbackString	  "|||"
+	  MaskEnableString	  "on,on,on,on"
+	  MaskVisibilityString	  "on,on,on,on"
+	  MaskVariables		  "ni=@1;a=@2;x0=@3;T=@4;"
+	  MaskInitialization	  "A=[];B=[];C=[];D=[];\nfor i=1:ni,\nA=[A,zer"
+"os(size(A,1),1);zeros(1,size(A,2)),exp(-a*T)];\nB=[B,zeros(size(B,1),1);zeros"
+"(1,size(B,2)),1-exp(-a*T)];\nC=[C,zeros(size(C,1),1);zeros(1,size(C,2)),exp(-"
+"a*T)];\nD=[D,zeros(size(D,1),1);zeros(1,size(D,2)),1-exp(-a*T)];\nend"
+	  MaskDisplay		  "dpoly(a,[1 a],'s')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  MaskValueString	  "1|15|0|0.05"
+	  System {
+	    Name		    "IIR4"
+	    Location		    [350, 143, 766, 250]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In"
+	      Position		      [80, 43, 110, 57]
+	      Port		      "1"
+	      PortWidth		      "-1"
+	      SampleTime	      "-1"
+	      DataType		      "auto"
+	      SignalType	      "auto"
+	      Interpolate	      on
+	    }
+	    Block {
+	      BlockType		      DiscreteStateSpace
+	      Name		      "Discrete State-Space"
+	      Position		      [135, 32, 255, 68]
+	      A			      "A"
+	      B			      "B"
+	      C			      "C"
+	      D			      "D"
+	      X0		      "x0"
+	      SampleTime	      "T"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out"
+	      Position		      [275, 43, 305, 57]
+	      Port		      "1"
+	      OutputWhenDisabled      "held"
+	      InitialOutput	      "[]"
+	    }
+	    Line {
+	      SrcBlock		      "Discrete State-Space"
+	      SrcPort		      1
+	      DstBlock		      "Out"
+	      DstPort		      1
+	    }
+	    Line {
+	      SrcBlock		      "In"
+	      SrcPort		      1
+	      DstBlock		      "Discrete State-Space"
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
+	  BlockType		  Mux
+	  Name			  "Mux1"
+	  Ports			  [2, 1, 0, 0, 0]
+	  Position		  [450, 156, 455, 194]
+	  BackgroundColor	  "black"
+	  ShowName		  off
+	  FontName		  "Arial"
+	  Inputs		  "[1 5]"
+	  DisplayOption		  "none"
+	}
+	Block {
+	  BlockType		  RateLimiter
+	  Name			  "Rate Limiter1"
+	  Position		  [285, 240, 315, 270]
+	  ShowName		  off
+	  RisingSlewLimit	  "100*pi/180"
+	  FallingSlewLimit	  "-100*pi/180"
+	}
+	Block {
+	  BlockType		  RateLimiter
+	  Name			  "Rate Limiter2"
+	  Position		  [285, 290, 315, 320]
+	  ShowName		  off
+	  RisingSlewLimit	  "100*pi/180"
+	  FallingSlewLimit	  "-100*pi/180"
+	}
+	Block {
+	  BlockType		  RateLimiter
+	  Name			  "Rate Limiter3"
+	  Position		  [285, 340, 315, 370]
+	  ShowName		  off
+	  RisingSlewLimit	  "100*pi/180"
+	  FallingSlewLimit	  "-100*pi/180"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation1"
+	  Position		  [340, 287, 375, 323]
+	  ShowName		  off
+	  UpperLimit		  "20*pi/180"
+	  LowerLimit		  "-20*pi/180"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation2"
+	  Position		  [340, 337, 375, 373]
+	  ShowName		  off
+	  UpperLimit		  "20*pi/180"
+	  LowerLimit		  "-20*pi/180"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation3"
+	  Position		  [340, 147, 375, 183]
+	  ShowName		  off
+	  UpperLimit		  "245440"
+	  LowerLimit		  "0"
+	}
+	Block {
+	  BlockType		  Saturate
+	  Name			  "Saturation4"
+	  Position		  [340, 237, 375, 273]
+	  ShowName		  off
+	  UpperLimit		  "20*pi/180"
+	  LowerLimit		  "-20*pi/180"
+	}
+	Block {
+	  BlockType		  TransportDelay
+	  Name			  "delay"
+	  Position		  [100, 290, 145, 320]
+	  FontName		  "Arial"
+	  DelayTime		  "0.03"
+	  InitialInput		  "0"
+	  BufferSize		  "1024"
+	}
+	Block {
+	  BlockType		  TransportDelay
+	  Name			  "delay "
+	  Position		  [100, 340, 145, 370]
+	  FontName		  "Arial"
+	  DelayTime		  "0.03"
+	  InitialInput		  "0"
+	  BufferSize		  "1024"
+	}
+	Block {
+	  BlockType		  SubSystem
+	  Name			  "t"
+	  Ports			  [0, 0, 0, 0, 0]
+	  Position		  [20, 15, 175, 50]
+	  ForegroundColor	  "blue"
+	  DropShadow		  on
+	  ShowName		  off
+	  OpenFcn		  "fdchelp actuatr"
+	  FontName		  "Arial"
+	  ShowPortLabels	  off
+	  MaskDisplay		  "disp('Actuator & cable dynamics\\nMarc Rauw"
+", October 1997')"
+	  MaskIconFrame		  on
+	  MaskIconOpaque	  on
+	  MaskIconRotate	  "none"
+	  MaskIconUnits		  "autoscale"
+	  System {
+	    Name		    "t"
+	    Location		    [199, 54, 314, 154]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "usletter"
+	    PaperUnits		    "inches"
+	    ZoomFactor		    "100"
+	    AutoZoom		    on
+	  }
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "throttle"
+	  Position		  [485, 165, 505, 185]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "1"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "deltae"
+	  Position		  [490, 245, 510, 265]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "2"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "deltaa"
+	  Position		  [490, 295, 510, 315]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "3"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "deltar"
+	  Position		  [490, 345, 510, 365]
+	  DropShadow		  on
+	  FontName		  "Arial"
+	  Port			  "4"
+	  OutputWhenDisabled	  "held"
+	  InitialOutput		  "[]"
+	}
+	Line {
+	  SrcBlock		  "D_ail"
+	  SrcPort		  1
+	  DstBlock		  "delay"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "D_elv"
+	  SrcPort		  1
+	  DstBlock		  " delay"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "D_rud"
+	  SrcPort		  1
+	  DstBlock		  "delay "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IIR2"
+	  SrcPort		  1
+	  DstBlock		  "Rate Limiter1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation4"
+	  SrcPort		  1
+	  DstBlock		  "deltae"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IIR3"
+	  SrcPort		  1
+	  DstBlock		  "Rate Limiter2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation1"
+	  SrcPort		  1
+	  DstBlock		  "deltaa"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IIR4"
+	  SrcPort		  1
+	  DstBlock		  "Rate Limiter3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation2"
+	  SrcPort		  1
+	  DstBlock		  "deltar"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Limiter1"
+	  SrcPort		  1
+	  DstBlock		  "Saturation4"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Limiter2"
+	  SrcPort		  1
+	  DstBlock		  "Saturation1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Rate Limiter3"
+	  SrcPort		  1
+	  DstBlock		  "Saturation2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Mux1"
+	  SrcPort		  1
+	  DstBlock		  "throttle"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Saturation3"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Ground1"
+	  SrcPort		  1
+	  DstBlock		  "Mux1"
+	  DstPort		  2
+	}
+	Line {
+	  SrcBlock		  "D_thr"
+	  SrcPort		  1
+	  DstBlock		  " delay "
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "IIR1"
+	  SrcPort		  1
+	  DstBlock		  "Force [N]"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Force [N]"
+	  SrcPort		  1
+	  DstBlock		  "Saturation3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " delay "
+	  SrcPort		  1
+	  DstBlock		  "IIR1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  " delay"
+	  SrcPort		  1
+	  DstBlock		  "IIR2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "delay"
+	  SrcPort		  1
+	  DstBlock		  "IIR3"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "delay "
+	  SrcPort		  1
+	  DstBlock		  "IIR4"
+	  DstPort		  1
+	}
+	Annotation {
+	  Position		  [47, 109]
+	  HorizontalAlignment	  "left"
+	  ForegroundColor	  "red"
+	  Text			  "Actuators initial condition are present\nin"
+"side delays and filters"
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "p"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 97, 655, 103]
+      Floating		      off
+      Location		      [912, 348, 1196, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "0"
+      YMax		      "250000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData7"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "psi"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 172, 655, 178]
+      Floating		      off
+      Location		      [912, 348, 1196, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "0"
+      YMax		      "250000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData10"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "q"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 122, 655, 128]
+      Floating		      off
+      Location		      [912, 348, 1196, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "0"
+      YMax		      "250000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData8"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "r"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 147, 655, 153]
+      Floating		      off
+      Location		      [912, 348, 1196, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "0"
+      YMax		      "250000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData9"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "stabs"
+      Position		      [250, 200, 300, 210]
+      ForegroundColor	      "blue"
+      FontName		      "Arial"
+      Value		      "-0.0171382"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "x_e"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 247, 655, 253]
+      Floating		      off
+      Location		      [912, 348, 1196, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "0"
+      YMax		      "250000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData13"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "y_e"
+      Ports		      [1, 0, 0, 0, 0]
+      Position		      [635, 272, 655, 278]
+      Floating		      off
+      Location		      [912, 348, 1196, 534]
+      Open		      off
+      NumInputPorts	      "1"
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+      }
+      Grid		      "on"
+      TimeRange		      "100             "
+      YMin		      "0"
+      YMax		      "250000"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData14"
+      DataFormat	      "StructureWithTime"
+      LimitMaxRows	      on
+      MaxRows		      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "0"
+    }
+    Line {
+      Name		      " "
+      Labels		      [1, 1]
+      SrcBlock		      "elevator"
+      SrcPort		      3
+      DstBlock		      "Mux"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "elevator"
+      SrcPort		      4
+      DstBlock		      "Mux"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "elevator"
+      SrcPort		      2
+      DstBlock		      "Mux"
+      DstPort		      1
+    }
+    Line {
+      Name		      "d_s"
+      Labels		      [1, 0]
+      SrcBlock		      "Autopilot"
+      SrcPort		      2
+      DstBlock		      "elevator"
+      DstPort		      2
+    }
+    Line {
+      Name		      "d_a"
+      Labels		      [1, 0]
+      SrcBlock		      "Autopilot"
+      SrcPort		      3
+      DstBlock		      "elevator"
+      DstPort		      3
+    }
+    Line {
+      Name		      "d_r"
+      Labels		      [1, 0]
+      SrcBlock		      "Autopilot"
+      SrcPort		      4
+      DstBlock		      "elevator"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Mux"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	Points			[0, 40]
+	DstBlock		"Mux1"
+	DstPort			4
+      }
+      Branch {
+	DstBlock		"DT-B747"
+	DstPort			3
+      }
+    }
+    Line {
+      SrcBlock		      "elevator"
+      SrcPort		      1
+      DstBlock		      "DT-B747"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Mux1"
+      SrcPort		      1
+      Points		      [0, 0; 25, 0]
+      Branch {
+	DstBlock		"Selector3"
+	DstPort			1
+      }
+      Branch {
+	DstBlock		"Sum"
+	DstPort			2
+      }
+    }
+    Line {
+      SrcBlock		      "Selector3"
+      SrcPort		      1
+      Points		      [0, 0; 10, 0]
+      Branch {
+	DstBlock		"Demux1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -35]
+	DstBlock		"Aircraft States"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      1
+      DstBlock		      "Airspeed"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      2
+      DstBlock		      "Alpha"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      3
+      DstBlock		      "Beta"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      4
+      DstBlock		      "p"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      5
+      DstBlock		      "q"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      6
+      DstBlock		      "r"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      7
+      DstBlock		      "psi"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      8
+      DstBlock		      "Theta"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      9
+      DstBlock		      "Phi"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      10
+      DstBlock		      "x_e"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      11
+      DstBlock		      "y_e"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Demux1"
+      SrcPort		      12
+      DstBlock		      "Altitude"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Autopilot"
+      SrcPort		      1
+      DstBlock		      "elevator"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Clock"
+      SrcPort		      1
+      DstBlock		      "To Workspace4"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "stabs"
+      SrcPort		      1
+      DstBlock		      "Mux"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Wind"
+      SrcPort		      1
+      Points		      [-15, 0; 0, 40]
+      DstBlock		      "DT-B747"
+      DstPort		      1
+    }
+    Line {
+      Name		      "x"
+      Labels		      [0, 0]
+      SrcBlock		      "DT-B747"
+      SrcPort		      1
+      DstBlock		      "Mux1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "xdt"
+      Labels		      [0, 0]
+      SrcBlock		      "DT-B747"
+      SrcPort		      2
+      DstBlock		      "Mux1"
+      DstPort		      2
+    }
+    Line {
+      Name		      "var"
+      Labels		      [0, 0]
+      SrcBlock		      "DT-B747"
+      SrcPort		      3
+      DstBlock		      "Mux1"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "The 747 Pilot Was Here"
+      SrcPort		      1
+      DstBlock		      "Autopilot"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground2"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	DstBlock		"Autopilot"
+	DstPort			4
+      }
+      Branch {
+	Points			[0, -10]
+	Branch {
+	  DstBlock		  "Autopilot"
+	  DstPort		  3
+	}
+	Branch {
+	  Points		  [0, -10]
+	  DstBlock		  "Autopilot"
+	  DstPort		  2
+	}
+      }
+    }
+    Line {
+      SrcBlock		      "Sum"
+      SrcPort		      1
+      Points		      [0, 15; -365, 0; 0, -110]
+      DstBlock		      "Autopilot"
+      DstPort		      5
+    }
+    Line {
+      SrcBlock		      "Noise"
+      SrcPort		      1
+      DstBlock		      "Sum"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Ground1"
+      SrcPort		      1
+      DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [236, 279]
+      Text		      "Copyright 2018 The MathWorks, Inc."
+    }
+  }
+}

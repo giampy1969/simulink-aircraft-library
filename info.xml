@@ -1,0 +1,48 @@
+<productinfo>
+
+<matlabrelease>11.1</matlabrelease>
+<name>Aircraft Library</name>
+<type>blockset</type>
+<icon>$toolbox/simulink/simulink/simulinkicon.gif</icon>
+
+<list>
+
+<listitem>
+<label>Help</label>
+<callback>doc airlib</callback>
+<icon>$toolbox/matlab/icons/book_sim.gif</icon>
+</listitem>
+
+<listitem>
+<label>Launch The Aircraft Library</label>
+<callback>airlib</callback>
+<icon>$toolbox/simulink/simulink/simulinkicon.gif</icon>
+</listitem>
+
+<listitem>
+<label>Aircraft Models</label>
+<callback>airlibex</callback>
+<icon>$toolbox/simulink/simulink/simulinkicon.gif</icon>
+</listitem>
+
+<listitem>
+<label>General Aircraft Controller</label>
+<callback>airgk</callback>
+<icon>$toolbox/matlab/icons/demoicon.gif</icon>
+</listitem>
+
+<listitem>
+<label>Boeing 747 in closed loop</label>
+<callback>B747cl</callback>
+<icon>$toolbox/matlab/icons/demoicon.gif</icon>
+</listitem>
+
+<listitem>
+<label>Wind Handling</label>
+<callback>fdcwind</callback>
+<icon>$toolbox/matlab/icons/demoicon.gif</icon>
+</listitem>
+
+</list>
+
+</productinfo>

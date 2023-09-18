@@ -1,0 +1,708 @@
+Model {
+  Name			  "airlibex"
+  Version		  3.00
+  SimParamPage		  "Solver"
+  SampleTimeColors	  off
+  InvariantConstants	  off
+  WideVectorLines	  off
+  ShowLineWidths	  off
+  ShowPortDataTypes	  off
+  StartTime		  "0.0"
+  StopTime		  "10.0"
+  SolverMode		  "Auto"
+  Solver		  "ode45"
+  RelTol		  "1e-3"
+  AbsTol		  "auto"
+  Refine		  "1"
+  MaxStep		  "auto"
+  InitialStep		  "auto"
+  FixedStep		  "auto"
+  MaxOrder		  5
+  OutputOption		  "RefineOutputTimes"
+  OutputTimes		  "[]"
+  LoadExternalInput	  off
+  ExternalInput		  "[t, u]"
+  SaveTime		  on
+  TimeSaveName		  "tout"
+  SaveState		  off
+  StateSaveName		  "xout"
+  SaveOutput		  on
+  OutputSaveName	  "yout"
+  LoadInitialState	  off
+  InitialState		  "xInitial"
+  SaveFinalState	  off
+  FinalStateName	  "xFinal"
+  SaveFormat		  "Matrix"
+  LimitMaxRows		  off
+  MaxRows		  "1000"
+  Decimation		  "1"
+  AlgebraicLoopMsg	  "warning"
+  MinStepSizeMsg	  "warning"
+  UnconnectedInputMsg	  "warning"
+  UnconnectedOutputMsg	  "warning"
+  UnconnectedLineMsg	  "warning"
+  InheritedTsInSrcMsg	  "warning"
+  IntegerOverflowMsg	  "warning"
+  UnnecessaryDatatypeConvMsg "none"
+  Int32ToFloatConvMsg	  "warning"
+  SignalLabelMismatchMsg  "none"
+  ConsistencyChecking	  "off"
+  ZeroCross		  on
+  SimulationMode	  "normal"
+  BlockDataTips		  on
+  BlockParametersDataTip  on
+  BlockAttributesDataTip  off
+  BlockPortWidthsDataTip  off
+  BlockDescriptionStringDataTip	off
+  BlockMaskParametersDataTip off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  OptimizeBlockIOStorage  on
+  BufferReuse		  on
+  BooleanDataType	  off
+  RTWSystemTargetFile	  "grt.tlc"
+  RTWInlineParameters	  off
+  RTWRetainRTWFile	  off
+  RTWTemplateMakefile	  "grt_default_tmf"
+  RTWMakeCommand	  "make_rtw"
+  RTWGenerateCodeOnly	  off
+  ExtModeMexFile	  "ext_comm"
+  ExtModeBatchMode	  off
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "oneshot"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  off
+  Created		  "Thu Jan 30 14:27:40 2003"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "gcampa"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Jan 24 17:48:58 2018"
+  ModelVersionFormat	  "1.%<AutoIncrement:34>"
+  ConfigurationManager	  "none"
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Helvetica"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  LineDefaults {
+    FontName		    "Helvetica"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "airlibex"
+    Location		    [25, 84, 1125, 607]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "automatic"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "usletter"
+    PaperUnits		    "inches"
+    ZoomFactor		    "100"
+    AutoZoom		    on
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Reference
+      Name		      " B747 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [35, 26, 90, 144]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[8.32   59.74   510.95   24675560  44876980   6"
+"7383260   0   1315126  0   288772]"
+      CD_wind		      "[0.0164  0.2  0  0  0]"
+      CL_wind		      "[0.21  4.4  6.6  0.32  0.7]"
+      Cm_body		      "[0  -1   -20.5    -1.3    -2.7]"
+      CY_body		      "[0   -0.9    0     0     -0    0.12]"
+      Cl_body		      "[0    -0.16    -0.34   0.13    -0.013    0.008]"
+      Cn_body		      "[0    0.16   -0.026    -0.28     -0.0018   -0.1"
+"]"
+      x0		      "[150.148  0.0464959 0   0 0 0   0 0.0464959 0  "
+" 0 0 61]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " Beech 99 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [445, 246, 500, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[1.9812   14.0208  26.0129  13673  20538  31246"
+"   0  2169.3  0   3175.2]"
+      CD_wind		      "[0.027   0.131  0  0  0]"
+      CL_wind		      "[0.201   5.48    8.1   0.6   0]"
+      Cm_body		      "[0.05  -1.89  -34.0   -2.0   0]"
+      CY_body		      "[0  -0.59  -0.19  0.39  0.0  0.148]"
+      Cl_body		      "[0    -0.13  -0.5  0.14  -0.156  0.0109]"
+      Cn_body		      "[0    0.08   0.0109  -0.197  0.0012  -0.0772]"
+      x0		      "[100  -0.00393591 0   0 0 0   0 -0.00393591 0  "
+" 0 0 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " Cessna 172 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [580, 246, 635, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[1.4935  10.9118  16.1651  1285.3  1824.9  2666"
+".9  0 0 0   1043.3]"
+      CD_wind		      "[0.031   0.13  0  0.06  0]"
+      CL_wind		      "[0.31   5.143    3.9   0.43   0]"
+      Cm_body		      "[-0.015  -0.89  -12.4   -1.28   0]"
+      CY_body		      "[0  -0.31 -0.037  0.21  0.0  0.187]"
+      Cl_body		      "[0    -0.089  -0.47  0.096  -0.178  0.0147]"
+      Cn_body		      "[0    0.065    -0.03  -0.099  -0.053  -0.0657]"
+      x0		      "[100  -0.0412737 0   0 0 0   0 -0.0412737 0   0"
+" 0 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " Cessna 310 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [715, 246, 770, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[1.46  11.2471  16.258  12045  2628.9  14915  0"
+" 0 0   2086.6]"
+      CD_wind		      "[0.029   0.16  0  0  0]"
+      CL_wind		      "[0.288   4.58    9.7   0.81   0]"
+      Cm_body		      "[0.07  -0.137   -26.3   -2.26  0]"
+      CY_body		      "[0  -0.698  -0.141  0.355  0.0  0.23]"
+      Cl_body		      "[0    -0.1096  -0.551  0.0729  -0.172  0.0192]"
+      Cn_body		      "[0    0.1444   -0.0257  -0.1495  0.0168  -0.115"
+"2]"
+      x0		      "[100  -0.0233566 0   0 0 0   0 -0.0233566 0   0"
+" 0 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " Cessna 620 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [855, 246, 910, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[2.006  16.7945  31.587  87872  23456  87509  0"
+" 0 0   6804]"
+      CD_wind		      "[0.0322   0.269  0  0  0]"
+      CL_wind		      "[0.48   5.55    7.5   0.58   0]"
+      Cm_body		      "[0.06  -1.18   -22.4   -1.73  0]"
+      CY_body		      "[0  -0.883  -0.227  0.448  0.0  0.2]"
+      Cl_body		      "[0   -0.1381  -0.566  0.1166  -0.1776  0.02]"
+      Cn_body		      "[0    0.1739   -0.0501   -0.2  0.0194  -0.1054]"
+      x0		      "[100  -0.029592 0   0 0 0   0 -0.029592 0   0 0"
+" 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " Cessna A-37/T-37 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [990, 246, 1045, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[1.6673 10.3022  16.9084  10826  4509.5  15162 "
+" 0 0 0   2884.9]"
+      CD_wind		      "[0.048  0.384  0  0  0]"
+      CL_wind		      "[0.2   5.15    4.1   0.5   0]"
+      Cm_body		      "[0.025   -0.7   -14.9   -1.12  0]"
+      CY_body		      "[0  -0.346  -0.0827  0.3  0.0  0.2]"
+      Cl_body		      "[0   -0.0944  -0.442  0.0926  -0.181  0.015]"
+      Cn_body		      "[0    0.1106   -0.0243   -0.139  0.0254  -0.036"
+"5]"
+      x0		      "[100  0.0130027 0   0 0 0   0 0.0130027 0   0 0"
+" 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " Convair 880 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [310, 246, 365, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[5.7729   36.5760  185.8061   155920   3321800 "
+"  5518200   0  0  0   57154]"
+      CD_wind		      "[0.024  0.150  0  0  0]"
+      CL_wind		      "[0.347   4.8    7.5   0.19   0]"
+      Cm_body		      "[0.0  -0.650  -4.5   -0.570    0]"
+      CY_body		      "[0  -0.812 0   0  0  0.184]"
+      Cl_body		      "[0    -0.117   -0.312  0.153   -0.050    0.019]"
+      Cn_body		      "[0    0.129   -0.011  -0.165  0.008  -0.076]"
+      x0		      "[100  0.032161 0   0 0 0   0 0.032161 0   0 0 6"
+"0]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " F-104 Starfighter "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [310, 26, 365, 144]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[2.926   6.6751   18.21   4881  79993   81349  "
+" 0   0  0   7393.7]"
+      CD_wind		      "[0.048  0.384  0  0  0]"
+      CL_wind		      "[0.122  2.005  1.9  0.684  0]"
+      Cm_body		      "[-0.028  -1.308   -4.83    -1.6    0]"
+      CY_body		      "[0   -1.045    0     0     -0    0.087]"
+      Cl_body		      "[0    -0.093   -0.272   0.154    -0.0173    0.0"
+"079]"
+      Cn_body		      "[0    0.242   -0.093   -0.649     -0.0025  -0.0"
+"435]"
+      x0		      "[100  0.333846 0   0 0 0   0 0.333846 0   0 0 6"
+"0]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " F4 Phantom "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [170, 26, 225, 144]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[4.8768   11.79576   49.23861   33895.4489   16"
+"5680.954   189543.35   0   2982.7995  0   17690.1]"
+      CD_wind		      "[0.0205  0.3   0  0  -0.1]"
+      CL_wind		      "[0.1    3.75    1.8    0    0.4]"
+      Cm_body		      "[0.025  -0.4   -2.7   -1    -0.58]"
+      CY_body		      "[0   -0.68   0     0     0.0160    0.095]"
+      Cl_body		      "[0    -0.16    -0.34   0.13    -0.013    0.008]"
+      Cn_body		      "[0    0.125   -0.036    -0.270     0.001   -0.0"
+"66]"
+      x0		      "[260  -0.00907902 0   0 0 0   0 -0.00907902 0  "
+" 0 0 60]"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " IAI Pioneer "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [580, 26, 635, 144]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[0.5486  5.1511  2.8261   47.2259  90.9483  111"
+".4754   0  -6.6462  0   190.512]"
+      CD_wind		      "[0.060  0.430  0  0.0180  0]"
+      CL_wind		      "[0.385  4.78  8.05  0.401  0]"
+      Cm_body		      "[0.194  -2.12   -36.6   -1.76    0]"
+      CY_body		      "[0   -0.819    0     0    0.191    0]"
+      Cl_body		      "[0   -0.023   -0.450   0.265   -0.161  -0.00229"
+"]"
+      Cn_body		      "[0    0.109  -0.110  -0.200    0.0200  -0.0917]"
+      x0		      "[60 -0.0293682 0   0 0 0   0 -0.0293682 0   0 0"
+" 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " Learjet 24 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [170, 246, 225, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[2.1336   10.3632  21.3677   37963   25489   63"
+"723   0   1762.6  0   5896.8]"
+      CD_wind		      "[0.0216  0.3   0  0  0]"
+      CL_wind		      "[0.130    5.840    4.7   0.46   0]"
+      Cm_body		      "[0.05  -0.64   -15.5   -1.24    0]"
+      CY_body		      "[0   -0.730  0.0   0.400   0.0   0.140]"
+      Cl_body		      "[0    -0.110    -0.450   0.160    -0.178    0.0"
+"19]"
+      Cn_body		      "[0    0.127   -0.008  -0.200   0.020  -0.074]"
+      x0		      "[100  0.0524554 0   0 0 0   0 0.0524554 0   0 0"
+" 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " SIAI-Marchetti S-211 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [35, 246, 90, 364]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[1.6459   8.0162   12.6348   1084.7   6507.9   "
+"7050.3   0   271.16  0   1814.4]"
+      CD_wind		      "[0.0205  0.12   0  0  0]"
+      CL_wind		      "[0.149    5.50    10.0   0.38   0]"
+      Cm_body		      "[-0.08  -0.24   -17.7    -0.88    0]"
+      CY_body		      "[0   -1.00   -0.140   0.61     0   0.0280]"
+      Cl_body		      "[0    -0.11    -0.39   0.28    -0.1    0.05]"
+      Cn_body		      "[0    0.17   0.09    -0.26     0.003   -0.120]"
+      x0		      "[100  0.0215504 0   0 0 0   0 0.0215504 0   0 0"
+" 60]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Block {
+      BlockType		      Reference
+      Name		      " X-15 "
+      Ports		      [3, 3, 0, 0, 0]
+      Position		      [445, 26, 500, 144]
+      DropShadow	      on
+      FontName		      "Arial"
+      SourceBlock	      "airlib/B747"
+      SourceType	      "General Nonlinear Aircraft Model"
+      GM1		      "[3.13   6.8153   18.58   4948.7  108470   11118"
+"0   0  800  0   14170]"
+      CD_wind		      "[0.095  0.6  0  0  0]"
+      CL_wind		      "[0  3.5  0  0.54  0]"
+      Cm_body		      "[0  -1.2   -6.2    -0.9    0]"
+      CY_body		      "[0   -1.4    0     0    0.05    0.45]"
+      Cl_body		      "[0   -0.01   -0.35   0.04    -0.06    0.012]"
+      Cn_body		      "[0    0.5  0   -1.5    -0.04  -0.3]"
+      x0		      "[100  0.392538 0   0 0 0   0 0.392538 0   0 0 6"
+"0]"
+      Port {
+	PortNumber		1
+	Name			"x"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		2
+	Name			"xdot"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+      Port {
+	PortNumber		3
+	Name			"var"
+	TestPoint		off
+	RTWStorageClass		"Auto"
+      }
+    }
+    Annotation {
+      Position		      [73, 190]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=180250.5;    \nde0=-1.71374e-4;\ndh0=-0.017"
+"1382; "
+    }
+    Annotation {
+      Position		      [203, 190]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=26027;        \nde0=0;                \ndh0"
+"=0.0493648; "
+    }
+    Annotation {
+      Position		      [338, 190]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=20681;      \nde0=-0.290419;\ndh0=0;       "
+"       "
+    }
+    Annotation {
+      Position		      [478, 190]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=40476.7;   \nde0=-0.523384;\ndh0=0;        "
+"      "
+    }
+    Annotation {
+      Position		      [618, 190]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=309.8742;   \nde0=0.145603;   \ndh0=0;     "
+"           "
+    }
+    Annotation {
+      Position		      [68, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=1776.7;     \nde0=-0.139322;\ndh0=0;       "
+"       "
+    }
+    Annotation {
+      Position		      [203, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=4865.1;      \nde0=0.0132488;\ndh0=0;      "
+"         "
+    }
+    Annotation {
+      Position		      [343, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=32632;        \nde0=-0.0366749;\ndh0=0;    "
+"            "
+    }
+    Annotation {
+      Position		      [478, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=4195.5;      \nde0=0.0287194;\ndh0=0;      "
+"         "
+    }
+    Annotation {
+      Position		      [613, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=2626;         \nde0=0.0169793;\ndh0=0;     "
+"          "
+    }
+    Annotation {
+      Position		      [748, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=2501,91;    \nde0=0.0323893;\ndh0=0;       "
+"        "
+    }
+    Annotation {
+      Position		      [888, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=4664.76;    \nde0=0.0548662;\ndh0=0;       "
+"        "
+    }
+    Annotation {
+      Position		      [1023, 410]
+      ForegroundColor	      "blue"
+      Text		      "Fx0=5457.08;    \nde0=0.0141948;\ndh0=0;       "
+"        "
+    }
+    Annotation {
+      Position		      [381, 480]
+      ForegroundColor	      "red"
+      Text		      "The initial state x0 together with the shown in"
+"put values for Fx, de and dh, form an airplane trim point.                   "
+"                                                     \nThe trim points were c"
+"alculated with the utility \"trimmod\" (available on the fileexchange site), "
+"by using thrust, de, alpha , theta as  trim variables       \nand  vdot=0, al"
+"phadot=0, qdot=0, Hdot=0; as trim requirements. Note that the given trim poin"
+"t does NOT usually coincide with the point in the flight \nenvelope in which "
+"the given constant aerodynamic coefficients form the best approximation of th"
+"e true nonlinear aerodynamic model of the aircraft. "
+    }
+    Annotation {
+      Position		      [938, 39]
+      Text		      "Aircraft Model Library"
+      FontName		      "Arial"
+      FontSize		      20
+      FontWeight	      "bold"
+    }
+    Annotation {
+      Position		      [964, 491]
+      Text		      "Copyright 2018 The MathWorks Inc."
+    }
+  }
+}
