@@ -28,5 +28,4 @@ This library should be an useful complement to the Aerospace Blockset, from The 
 
 This is an OPEN project, so feel free to contribute in any way, in particular, if you have inertial and aerodynamic data of an aircraft that is not in the library, you can send it to me and i will be pleased to put it in the library along with your name.
 
-Giampiero Campa, Feb 2004  
-Copyright 2018 The MathWorks, Inc.
+Giampiero Campa, Feb 2024
