@@ -14,11 +14,13 @@ Each model is a link to one of the two library blocks, but of course with differ
 
 An example showing a Boeing 747 in a (closed loop) straight and level flight is also given.
 
-In May 2003 a very effective MATLAB&reg; function (air3m.m) was added to allow the user to easily trim any given aircraft for any combination of desired speed, altitude, and flight path angle.
+In May 2003 a very effective MATLAB&reg; function (air3m.m) was added to allow the user to easily trim any given aircraft for any combination of desired speed, altitude, and flight path angle. This is based on the jj_3m , jj_lin, and other functions from J. J. Buchholz and Daniel Kiehn (thank you J.J and Daniel).
 
 In March 04, a function that computes the aerodynamic derivatives from the linear model matrices was added, together with a Simulink model that compares two different ways of handling the wind in the equations of motions.
 
 In July 2006 a full guidance and control system based on the feedback linearization of the aircraft kinematic and dynamics was added. The scheme includes a waypoint generation system, and can be easily adapted to any aircraft with known aerodynamics coefficients.
 
+In November 2024 Paolo Massioni replaced the older air2m helper functions with new ones (thank you Paolo).
+
 Please have a look to the readme.txt file for more detailed info.
-Giampiero Campa, March 2004
+Giampiero Campa, March 2024
