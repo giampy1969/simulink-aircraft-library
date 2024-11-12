@@ -13,7 +13,7 @@ Many parameters were taken by this website http://www.aae.uiuc.edu/m-selig/apasi
 
 An example showing a Boeing 747 in a (closed loop) straight and level flight is also given. Finally, the file airtrim.mdl could be easily invoked to find a trim point for a given aircraft. 
 
-Altough the trim points were computed using the entire trimmod utility, in May 2003 a very effective matlab function (air3m.m) was added to allow the user to easily trim any given aircraft for any combination of desired speed, altitude, and flight path angle. Moreover, when those desired conditions are supplied as matrices, then the input and state vectors for the resulting trim points are given as 5D matrices that are ready to be used with the block "interpolate matrix" from the Aerospace Blockset. Modifying the function to give as output also the 5D matrices A,B,C,D to be used with the "3D controller" block, (also from the Aerospace Blockset) should be immediate.
+Altough the trim points were computed using the entire trimmod utility, in May 2003 a very effective matlab function (air3m.m) was added to allow the user to easily trim any given aircraft for any combination of desired speed, altitude, and flight path angle. This is based on the jj_3m , jj_lin, and other functions from J. J. Buchholz and Daniel Kiehn (thank you J.J and Daniel). Moreover, when those desired conditions are supplied as matrices, then the input and state vectors for the resulting trim points are given as 5D matrices that are ready to be used with the block "interpolate matrix" from the Aerospace Blockset. Modifying the function to give as output also the 5D matrices A,B,C,D to be used with the "3D controller" block, (also from the Aerospace Blockset) should be immediate. 
 
 In February 2004, the function ab2dv.m and the model fdcwind.mdl were added. The first is a function that recovers the aerodynamic derivatives of an aircraft given its inertial data, some trim point values, and the longitudinal and lateral A and B matrices. The second is a file that compares two different but equivalent ways to handle the wind in the equations. This also proves that the way in which FDC handles the wind is fully correct provided that the right initial conditions are chosen for V,alpha,beta whenever the initial value of the wind is nonzero.
 
@@ -21,6 +21,8 @@ In July 2006 a full guidance and control system based on the feedback linearizat
 
 NOTE: in Aug 2017 the old xyz scope graph (sfunxyz.m) used in airgk.mdl was replaced with the new function sfun3d.m whichworks better but only for 2014b and later.
 If you need to use version prior to 2014b you can either just delete the the 3D graph block, or if you need 3D trajectory visualization you can use the model airgkr11, after installing the 3DScope package from here: https://www.mathworks.com/matlabcentral/fileexchange/4915
+
+In November 2024 Paolo Massioni replaced the older air2m helper functions with new ones (thank you Paolo).
 
 This library should be an useful complement to the Aerospace Blockset, from The Mathworks, (http://www.mathworks.com/products/aeroblks/). Even for those who use the Aerosim Blockset, (http://www.u-dynamics.com/aerosim/default.htm) the library could serve as an useful collection of drag-and-drop ready-to-use nonlinear aircraft models.
 
